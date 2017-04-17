@@ -50,5 +50,26 @@ class Team
 
  def add_player(new_player)
    @players.push(new_player)
- end 
+ end
+ 
+ def check_player(player_name)
+  return @players.include? (player_name)
+ end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end

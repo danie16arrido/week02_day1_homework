@@ -42,5 +42,30 @@ class TestLab < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_check_if_player_is_in_team
+    actual = @team.check_player("Iniesta")
+    expected = true
+    assert_equal(expected, actual)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
 
