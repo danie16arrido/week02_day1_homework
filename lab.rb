@@ -31,7 +31,7 @@ class Student
 end
 
 class Team
-  attr_accessor :name, :players, :coach
+  attr_accessor :name, :players, :coach, :points
   def initialize(a_name, players = Array.new, coach)
     @name = a_name
     @players = players
@@ -54,6 +54,10 @@ class Team
  
  def check_player(player_name)
   return @players.include? (player_name)
+ end
+
+ def init_points
+   @points = 0
  end
 
 

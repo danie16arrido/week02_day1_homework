@@ -48,6 +48,13 @@ class TestLab < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_create_points
+    @team.init_points
+    actual = @team.points
+    expected = 0
+    assert_equal(expected, actual)
+  end
+
 
 
 
