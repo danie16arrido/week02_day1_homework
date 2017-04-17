@@ -27,5 +27,14 @@ class Student
  def say_favourite_language(fav_language)
    return "I love #{fav_language}"
  end
- 
+
+end
+
+class Team
+  attr_accessor :name, :players, :coach
+  def initialize(a_name, players = Array.new, coach)
+    @name = a_name
+    @players = players
+    @coach = coach
+  end
 end
