@@ -37,4 +37,16 @@ class Team
     @players = players
     @coach = coach
   end
+
+  def test_get_team_players
+    actual = @team.players
+    expected = ["Iniesta", "Arbeloa", "Ramos"]
+    assert_equal(expected, actual)
+  end
+
+  def test_get_team_coach
+    assert_equal("el_profe", @team.coach)
+  end
+
+  
 end
