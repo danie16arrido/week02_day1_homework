@@ -48,5 +48,7 @@ class Team
     assert_equal("el_profe", @team.coach)
   end
 
-  
+ def add_player(new_player)
+   @players.push(new_player)
+ end 
 end
