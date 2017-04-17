@@ -117,4 +117,3 @@ class Library
   end
 
 end
-

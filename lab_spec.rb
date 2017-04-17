@@ -120,30 +120,6 @@ class TestLibrary < MiniTest::Test
     actual = @library.get_book_info("lord_of_the_rings")
     expected = ["Peter", "03/12/16"]
     assert_equal(expected, actual)
-
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
-
