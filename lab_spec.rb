@@ -114,6 +114,15 @@ class TestLibrary < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_change_renting_details
+    @library = Library.new(@books1)
+    @library.change_renting_data("lord_of_the_rings", "Peter", "03/12/16")
+    actual = @library.get_book_info("lord_of_the_rings")
+    expected = ["Peter", "03/12/16"]
+    assert_equal(expected, actual)
+
+  end
+
 
 
 

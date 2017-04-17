@@ -104,8 +104,16 @@ class Library
         date: ""
       }  
     }
-    puts new_book.class
     @books << new_book
+  end
+
+  def change_renting_data(book_name, student_renting, date_due)
+    @books.each do |book|
+      if book_name == book[:title]
+        book[:rental_details][:student_name] = student_renting
+        book[:rental_details][:date] = date_due
+      end
+    end
   end
 
 end
