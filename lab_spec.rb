@@ -16,5 +16,15 @@ class TestLab < MiniTest::Test
     assert_equal(12, @student.get_cohort)
   end
 
+  def test_set_name
+    @student.set_name("Peter")
+    assert_equal("Peter", @student.get_name)
+  end
+
+  def test_set_cohort
+    @student.set_cohort(13)
+    assert_equal(13, @student.get_cohort)
+  end
+
 end
 
