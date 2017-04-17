@@ -72,16 +72,6 @@ end
 
 class TestLibrary < MiniTest::Test
   def setup
-    # @books = [ 
-    #   { 
-    #     title: "lord_of_the_rings",
-    #     rental_details: { 
-    #      student_name: "Jeff", 
-    #      date: "01/12/16"
-    #     }
-    #   }
-    # ]
-
     @book_1 = { 
         title: "lord_of_the_rings",
         rental_details: { 
@@ -90,12 +80,13 @@ class TestLibrary < MiniTest::Test
         }
       }
     @book_2 = { 
-        title: "lord_of_the_rings",
+        title: "freakonomics",
         rental_details: { 
-         student_name: "Jeff", 
-         date: "01/12/16"
+         student_name: "Daniel", 
+         date: "02/12/16"
         }
       }  
+
     @books12 =[@book_1, @book_2]  
     @books1 = [@book_1]  
     #@library = Library.new(@books)
@@ -112,6 +103,14 @@ class TestLibrary < MiniTest::Test
     @library = Library.new(@books1)
     actual = @library.get_book_info("lord_of_the_rings") 
     expected = ["Jeff", "01/12/16"]
+    assert_equal(expected, actual)
+  end
+
+  def test_add_book_title
+    @library = Library.new(@books12)
+    @library.add_book_title("log")
+    actual = @library.get_book_info("log")
+    expected = ["", ""]
     assert_equal(expected, actual)
   end
 

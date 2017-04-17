@@ -96,7 +96,17 @@ class Library
    end
   end
 
-
+  def add_book_title(book_title_to_add)
+    new_book = {
+      title: book_title_to_add,
+      rental_details: { 
+        student_name: "", 
+        date: ""
+      }  
+    }
+    puts new_book.class
+    @books << new_book
+  end
 
 end
 
