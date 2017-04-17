@@ -64,20 +64,4 @@ class Team
    @points += 3 if result == "win"
  end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
