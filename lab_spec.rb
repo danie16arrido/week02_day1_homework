@@ -79,23 +79,45 @@ class TestLibrary < MiniTest::Test
          student_name: "Jeff", 
          date: "01/12/16"
         }
-      },
-      { 
-        title: "Freakonomics",
-        rental_details: { 
-         student_name: "Dan", 
-         date: "02/12/16"
-        }
-      }
+      }      
 
     ]
     @library = Library.new(@books)
   end
 
   def test_list_books_and_details
-    actual = 
-    expected = nil
+    actual = @library.list_books 
+    expected = [["lord_of_the_rings", "Jeff", "01/12/16"]] 
     assert_equal(expected, actual)
   end
+
+  def test_return_book_info
+    actual = @library.get_book_info("lord_of_the_rings") 
+    expected = ["Jeff", "01/12/16"]
+    assert_equal(expected, actual)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
 

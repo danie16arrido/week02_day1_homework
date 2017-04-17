@@ -71,6 +71,32 @@ class Library
   def initialize(books)
     @books = books
   end
-end
 
+  def list_books
+    list_books =[]
+    @books.each do |book|
+      list = []
+      list << book[:title]
+      list << book[:rental_details][:student_name]
+      list << book[:rental_details][:date]
+      list_books << list
+    end
+    return list_books
+  end
+
+  def get_book_info(book_to_search)
+    @books.each do |book|
+     if book[:title] == book_to_search
+      found_book_details = book[:rental_details]
+      return Array[
+        found_book_details[:student_name], 
+        found_book_details[:date]
+      ] 
+    end
+   end
+  end
+
+
+
+end
 
