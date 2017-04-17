@@ -3,7 +3,7 @@ require('minitest/rg')
 
 require_relative('./lab.rb')
 
-class TestLab < MiniTest::Test
+class TestStudent < MiniTest::Test
   def setup
     @student = Student.new("daniel", 12)
   end
@@ -69,3 +69,33 @@ class TestTeam < MiniTest::Test
     assert_equal(expected, actual)
   end
 end
+
+class TestLibrary < MiniTest::Test
+  def setup
+    @books = [
+      { 
+        title: "lord_of_the_rings",
+        rental_details: { 
+         student_name: "Jeff", 
+         date: "01/12/16"
+        }
+      },
+      { 
+        title: "Freakonomics",
+        rental_details: { 
+         student_name: "Dan", 
+         date: "02/12/16"
+        }
+      }
+
+    ]
+    @library = Library.new(@books)
+  end
+
+  def test_list_books_and_details
+    actual = 
+    expected = nil
+    assert_equal(expected, actual)
+  end
+end
+

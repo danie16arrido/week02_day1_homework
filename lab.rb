@@ -65,3 +65,12 @@ class Team
  end
 
 end
+
+class Library
+
+  def initialize(books)
+    @books = books
+  end
+end
+
+
