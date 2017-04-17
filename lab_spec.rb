@@ -30,5 +30,9 @@ class TestLab < MiniTest::Test
     assert_equal("I can talk!", @student.get_to_talk)
   end 
 
+  def test_say_favourite_language
+    assert_equal( "I love Ruby", @student.say_favourite_language("Ruby"))
+  end
+
 end
 
