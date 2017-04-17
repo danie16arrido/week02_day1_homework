@@ -60,6 +60,10 @@ class Team
    @points = 0
  end
 
+ def update_win_lost(result)
+   @points += 3 if result == "win"
+ end
+
 
 
 

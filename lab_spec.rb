@@ -55,6 +55,14 @@ class TestLab < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_check_win
+    @team.init_points 
+    @team.update_win_lost("win")
+    actual = @team.points
+    expected = 3
+    assert_equal(expected, actual)
+  end
+
 
 
 
