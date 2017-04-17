@@ -11,7 +11,7 @@ class Student
  def get_cohort
    return @cohort
  end
- 
+
  def set_name(new_name)
    @name = new_name
  end
@@ -19,4 +19,8 @@ class Student
  def set_cohort(new_value)
    @cohort = new_value
  end 
+
+ def get_to_talk
+   return "I can talk!"
+ end
 end

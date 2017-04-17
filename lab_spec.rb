@@ -26,5 +26,9 @@ class TestLab < MiniTest::Test
     assert_equal(13, @student.get_cohort)
   end
 
+  def test_get_to_talk
+    assert_equal("I can talk!", @student.get_to_talk)
+  end 
+
 end
 
