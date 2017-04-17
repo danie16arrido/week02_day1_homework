@@ -6,7 +6,6 @@ require_relative('./lab.rb')
 class TestLab < MiniTest::Test
   def setup
     @student = Student.new("daniel", 12)
-    @team = Team.new("Spain", ["Iniesta", "Arbeloa", "Ramos"], "el_profe")
   end
   
   def test_get_name
@@ -33,6 +32,13 @@ class TestLab < MiniTest::Test
 
   def test_say_favourite_language
     assert_equal( "I love Ruby", @student.say_favourite_language("Ruby"))
+  end
+
+end
+
+class TestTeam < MiniTest::Test
+  def setup
+    @team = Team.new("Spain", ["Iniesta", "Arbeloa", "Ramos"], "el_profe")
   end
 
   def test_add_player
@@ -62,25 +68,4 @@ class TestLab < MiniTest::Test
     expected = 3
     assert_equal(expected, actual)
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
-
