@@ -67,9 +67,17 @@ class TestTeam < MiniTest::Test
 
   def test_check_win
     @team.init_points 
-    @team.update_win_lost("win")
+    @team.update_win_lost("Win")
     actual = @team.points
     expected = 3
+    assert_equal(expected, actual)
+  end
+  
+  def test_check_lost
+    @team.init_points 
+    @team.update_win_lost("lost")
+    actual = @team.points
+    expected = 0
     assert_equal(expected, actual)
   end
 end

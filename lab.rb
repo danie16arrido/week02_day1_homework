@@ -63,7 +63,7 @@ class Team
  end
 
  def update_win_lost(result)
-   @points += 3 if result == "win"
+   @points += 3 if result.downcase() == "win"
  end
 
 end
