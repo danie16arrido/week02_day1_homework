@@ -39,12 +39,16 @@ end
 class TestTeam < MiniTest::Test
   def setup
     @team = Team.new("Spain", ["Iniesta", "Arbeloa", "Ramos"], "el_profe")
+    #Use a array to hold players and then add it to @team
+    #@team = ["Iniesta", "Arbeloa", "Ramos"]
+    #@team = Team.new("Spain",@team , "el_profe")
   end
 
   def test_add_player
-    @team.players = []
-    actual = @team.add_player("Casillas")
-    expected = ["Casillas"]
+    #@team.players = []
+    @team.add_player("Casillas")
+    actual = @team.players.count()
+    expected = 4 
     assert_equal(expected, actual)
   end
 

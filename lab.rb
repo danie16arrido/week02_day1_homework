@@ -31,8 +31,10 @@ class Student
 end
 
 class Team
-  attr_accessor :name, :players, :coach, :points
-  def initialize(a_name, players = Array.new, coach)
+ # attr_accessor :name, :players, :coach, :points
+  attr_reader :name, :players,:points
+  attr_accessor :coach
+  def initialize(a_name, players, coach)
     @name = a_name
     @players = players
     @coach = coach
